@@ -1,54 +1,64 @@
-/*
+/**
  * Adel Karabegovic
  * Last Edited: 2/18/2019
  * Description: Calculator program will be using tool versions from
- * github and applying basic math operations through methods
+ * github and applying basic math operations through methods.
+ * <p>
+ * @param value
+ * @return total
  */
 package cse360assign2;
 
 public class Calculator {
 
-	//variables
+	/*variables*/
 	private int total;
 	
-	
-	//default constructor
+	/*constructors*/
 	public Calculator () 
 	{
-		total = 0;  // not needed - included for clarity
+		// not needed - included for clarity
+		total = 0;  
 	}
 	
-	//returns total
+	/*getTotal - returns total*/
 	public int getTotal () 
 	{
-		return 0;
+		return total;
 	}
 	
-	//add to total
+	/*add - add to total*/
 	public void add (int value) 
 	{
-		
+		total = total + value;
 	}
 	
-	//subtract from total
+	/*subtract - subtract from total*/
 	public void subtract (int value) 
 	{
-		
+		total = total - value;
 	}
 	
-	//multiply to total
+	/*multiply - multiply to total*/
 	public void multiply (int value) 
 	{
-		
+		total = total * value;
 	}
 	
-	//divide from total
+	/*divide - divide from total*/
 	public void divide (int value) 
 	{
-		
+		if (value == 0)
+		{
+			total = 0;
+		}
+		else
+		{
+		total = total / value;
+		}
 	}
 	
-	//
+	/*getHistory -*/
 	public String getHistory () 
 	{
 		return "";
