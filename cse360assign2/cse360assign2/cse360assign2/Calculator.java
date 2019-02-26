@@ -13,12 +13,14 @@ public class Calculator {
 
 	/*variables*/
 	private int total;
+	private String history;
 	
 	/*constructors*/
 	public Calculator () 
 	{
 		// not needed - included for clarity
 		total = 0;  
+		history = "0";
 	}
 	
 	/*getTotal - returns total*/
@@ -30,18 +32,21 @@ public class Calculator {
 	/*add - add to total*/
 	public void add (int value) 
 	{
+		history = history + " " + "+" + " " + value;
 		total = total + value;
 	}
 	
 	/*subtract - subtract from total*/
 	public void subtract (int value) 
 	{
+		history = history + " " + "-" + " " + value;
 		total = total - value;
 	}
 	
 	/*multiply - multiply to total*/
 	public void multiply (int value) 
 	{
+		history = history + " " + "*" + " " + value;
 		total = total * value;
 	}
 	
@@ -56,11 +61,12 @@ public class Calculator {
 		{
 		total = total / value;
 		}
+		history = history + " " + "/" + " " + value;
 	}
 	
-	/*getHistory -*/
+	/*getHistory - returns a string of operation history*/
 	public String getHistory () 
 	{
-		return "";
+		return history;
 	}
 }
